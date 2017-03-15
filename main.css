@@ -51,7 +51,7 @@ footer {
     margin-left: 10px;
     border-color: #f57900;
     color: #f57900;
-    font-weight: 600;
+    font-weight: 400;
 }
 
 .dw-btn:hover {
@@ -77,5 +77,10 @@ footer {
 }
 
 .text-small {
+  font-weight: 300;
+}
+
+.text-medium {
+  font-size: 1.3em;
   font-weight: 300;
 }
