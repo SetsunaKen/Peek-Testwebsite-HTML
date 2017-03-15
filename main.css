@@ -1,0 +1,77 @@
+@charset "UTF-8";
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:300,400,600');
+body, h1, h2, h3, p, nav, ul, li, a, .uk-navbar-item, .uk-navbar-nav>li>a {
+    font-family: 'Open Sans', sans-serif;
+}
+
+h1 {
+    font-weight: 300;
+    font-size: 2.4rem;
+}
+
+footer {
+    padding-top: 5px;
+    padding-bottom: 5px;
+    font-weight: 300;
+    background-color: #f1f1f1;
+}
+
+.uk-tab>.uk-active>a {
+    border-color: #f57900;
+}
+
+
+/** -- Navbar -- **/
+
+.bar {
+    height: 5px;
+    width: 100%;
+    top: 0;
+    background-color: #f57900;
+}
+
+.uk-navbar-container {
+    height: 64px;
+}
+
+.uk-navbar-container:not(.uk-navbar-transparent) {
+    background: #fff;
+}
+
+.img-logo {
+    height: 32px;
+    width: 32px;
+}
+
+.uk-navbar-item, .uk-navbar-nav>li>a, .uk-navbar-toggle {
+    height: 64px;
+}
+
+.dw-btn {
+    margin-left: 10px;
+    border-color: #f57900;
+    color: #f57900;
+    font-weight: 600;
+}
+
+.dw-btn:hover {
+    color: white;
+    background-color: #f57900;
+    border-color: #f57900;
+}
+
+
+/** ------ **/
+
+
+/** -- Sections -- **/
+
+.space {
+    border-bottom: 1px solid rgba(0, 0, 0, 0.15);
+    padding-top: 30px;
+    padding-bottom: 30px;
+}
+
+.features {
+    background-color: #f8f8f8;
+}

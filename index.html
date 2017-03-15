@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+    <!-- Android -->
+    <meta name="mobile-web-app-capable" content="yes" />
+    <meta name="theme-color" content="#f57900" />
+    <!-- iOS -->
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="#f57900" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/uikit/3.0.0-beta.18/css/uikit.min.css" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/uikit/3.0.0-beta.18/js/uikit.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/uikit/3.0.0-beta.18/js/uikit-icons.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.10.0/highlight.min.js"></script>
+    <script>
+        hljs.initHighlightingOnLoad();
+    </script>
+    <meta name="author" content="darim@wiredia" />
+    <meta name="description" content="Simple screen recorder with an easy to use interface" />
+    <link rel="icon" type="image/png" href="fav.png" />
+    <link rel="stylesheet" href="main.css" />
+    <title>Peek - an animated GIF recorder</title>
+</head>
+
+<body class="uk-animation-fade">
+    <header>
+        <div class="bar"></div>
+        <div class="uk-container uk-container-expand">
+            <div class="uk-navbar-container" uk-navbar>
+                <div class="uk-navbar-left">
+                    <a class="uk-navbar-toggle uk-hidden@m" uk-navbar-toggle-icon href="" uk-toggle="target: #offcanvas-nav"></a>
+                    <a class="uk-navbar-item uk-logo" href="#"><img class="img-logo" src="img/peek.png"></a>
+
+                </div>
+                <div class="uk-navbar-right">
+                    <ul class="uk-navbar-nav uk-visible@m">
+                        <li class="uk-active"><a href="#start">Home</a></li>
+                        <li><a href="#feat" uk-scroll>Features</a></li>
+                        <li><a href="#install" uk-scroll>Install</a></li>
+                        <li><a href="#get" uk-scroll>Get Involved</a></li>
+                        <li><a href="#faqs" uk-scroll>FAQs</a></li>
+                    </ul>
+                    <a class="uk-button uk-button-default dw-btn" href="">Download</a>
+                </div>
+            </div>
+        </div>
+
+        <div id="offcanvas-nav" uk-offcanvas="overlay: true">
+            <div class="uk-offcanvas-bar">
+
+                <ul class="uk-nav uk-nav-default">
+                    <li class="uk-nav-header">Menu</li>
+                    <li class="uk-nav-divider"></li>
+                    <li><a href="#feat" uk-scoll>features</a></li>
+                    <li><a href="#install" uk-scroll>install</a></li>
+                    <li><a href="#get" uk-scroll>get involved</a></li>
+                    <li><a href="#faqs" uk-scroll>faqs</a></li>
+                </ul>
+
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <section class="promo space">
+            <div class="uk-container uk-container-large">
+                <h1 class="uk-text-center">Peek - an animated GIF recorder</h1>
+                <p class="uk-text-center">A Simple screen recorder with an easy to use interface</p>
+                <img class="uk-align-center" src="img/peek-recording-itself.gif" uk-gif>
+            </div>
+        </section>
+
+        <section id="feat" class="features space">
+            <div class="uk-container uk-container-large">
+                <h1 class="uk-text-center">Features</h1>
+                <p class="uk-text-center">What can you do with Peek?</p>
+            </div>
+        </section>
+
+        <section id="install" class="install space">
+            <div class="uk-container uk-container-small">
+                <h1 class="uk-text-center">Install Peek</h1>
+                <p class="uk-text-center">Peek is available for a variety of Distributions</p>
+
+                <ul class="uk-flex-center" uk-tab uk-switcher>
+                    <li class="uk-active"><a href="#">Flatpak</a></li>
+                    <li><a href="#">Ubuntu</a></li>
+                    <li><a href="#">Arch Linux</a></li>
+                    <li><a href="#">Debian</a></li>
+                    <li><a href="#">Fedora</a></li>
+                    <li><a href="#">Source</a></li>
+                    <li><a href="#">Others</a></li>
+                </ul>
+
+                <ul class="uk-switcher">
+                    <li>
+                        <h3>Flatpak</h3>
+                        <p>Peek can be installed on all distributions supporting <a href="https://flatpak.org/">Flatpak</a>. To install, either download <a href="https://raw.githubusercontent.com/phw/peek/master/data/flatpak/peek-stable.flatpakref">peek-stable.flatpakref</a>                            and open it with GNOME Software or install via command line:</p>
+                        <pre><code class="bash">flatpak install --user https://raw.githubusercontent.com/phw/peek/master/data/flatpak/peek-stable.flatpakref</code></pre>
+                        <p>For full functionality you should also install <a href="https://github.com/flatpak/xdg-desktop-portal-gtk">xdg-desktop-portal-gtk</a>. Once installed you can run Peek via its application icon in your desktop environment or from
+                            command line:</p>
+                        <pre><code class="bash">flatpak run com.uploadedlobster.peek</code></pre>
+                        <p>To update to the latest version run:</p>
+                        <pre><code class="bash">flatpak update --user com.uploadedlobster.peek</code></pre>
+                        <p>To test the latest development version you can install <a href="https://raw.githubusercontent.com/phw/peek/master/data/flatpak/peek-master.flatpakref">peek-master.flatpakref</a>.</p>
+                    </li>
+                    <li>
+                        <h3>Ubuntu</h3>
+                        <p>You can install the latest versions of Peek from the <a href="https://code.launchpad.net/~peek-developers/+archive/ubuntu/stable">Ubuntu PPA.</a></p>
+                        <pre><code class="bash"></code>sudo add-apt-repository ppa:peek-developers/stable <br>sudo apt update <br>sudo apt install peek</pre>
+                    </li>
+                    <li>
+                        <h3>Arch Linux</h3>
+                        <p>For Arch Linux peek is available in the <a href="https://aur.archlinux.org/packages/peek/">AUR</a>. You can also use <a href="https://aur.archlinux.org/packages/peek-git/">peek-git</a> to install the latest development version.</p>
+                        <pre><code class="bash">yaourt -S peek</code></pre>
+                        <pre><code class="bash">yaourt -S peek-git</code></pre>
+                    </li>
+                    <li>
+                        <h3>Debian</h3>
+                        <p>There are no official Debian packages, yet, but you can easily create your own .deb package for Peek. First install the build dependencies:</p>
+                        <pre><code class="bash">sudo apt install cmake valac libgtk-3-dev libkeybinder-3.0-dev libxml2-utils gettext</code></pre>
+                        <p>Then build Peek and package it:</p>
+                        <pre><code class="bash">git clone git@github.com:phw/peek.git <br>mkdir peek/build <br>cd peek/build <br>cmake -DCMAKE_INSTALL_PREFIX=/usr -DGSETTINGS_COMPILE=OFF .. <br>make package</code></pre>
+                        <p>This will create the package peek-1.0.0-Linux.deb. You can install it with dpkg:</p>
+                        <pre><code class="bash">sudo dpkg -i peek-1.0.0-Linux.deb</code></pre>
+                        <p>Alternatively you might want to try the Ubuntu packages from the PPA, they probably work just fine on Debian, too.</p>
+                    </li>
+
+                    <li>
+                        <h3>Fedora</h3>
+                        <p>Fedora 25 users can use this repository:</p>
+                        <pre><code class="bash">sudo dnf config-manager --add-repo http://download.opensuse.org/repositories/home:/Bajoja/Fedora_25/home:Bajoja.repo <br>sudo dnf install peek -y</code></pre>
+                        <p>To install the required ffmpeg package you can use the RPM Fusion free repository, see the setup instructions for RPM fusion. Once the repository is enabled install ffmpeg with:</p>
+                        <pre><code class="bash">sudo dnf install ffmpeg</code></pre>
+                    </li>
+
+                    <li>
+                        <h3>From Source</h3>
+                        <p>You can build and install Peek using CMake:</p>
+                        <pre><code class="bash">git clone git@github.com:phw/peek.git <br>mkdir peek/build <br>cd peek/build <br>cmake -DCMAKE_INSTALL_PREFIX=/usr .. <br>make <br># Run directly from source <br>./peek <br># Install system wide <br>sudo make install</code></pre>
+                        <p>You can uninstall Peek again by running <code class="bash">sudo make uninstall</code> from within the build directory.</p>
+                    </li>
+
+
+                    <li>
+                        <h3>Official distribution packages</h3>
+                        <p>Peek is available in official package repositories for the following distributions:</p>
+                        <ul class="uk-list uk-list-bullet">
+                            <li>Gento</li>
+                            <li>OpenSUSE</li>
+                            <li>Parabola</li>
+                        </ul>
+                    </li>
+
+                </ul>
+
+
+
+            </div>
+        </section>
+
+        <section id="faqs" class="faqs space">
+            <div class="uk-container uk-container-small">
+                <h1 class="uk-text-center">Frequently Asked Questions</h1>
+                <ul uk-accordion>
+                    <li class="uk-open">
+                        <h3 class="uk-accordion-title">How can I capture mouse clicks and/or key strokes?</h3>
+                        <div class="uk-accordion-content">
+                            <p>Peek does not support this natively. But you could install an external tool like key-mon which is usually included in most distributions, so you can easily install with your package manager. Then start key-mon with key-mon
+                                <strong>--visible_click</strong>. <br />The <strong>--visible_click</strong> option is for drawing small circles around mouse clicks.</p>
+                        </div>
+                    </li>
+                    <li>
+                        <h3 class="uk-accordion-title">The recording area is all black, how can I record anything?</h3>
+                        <div class="uk-accordion-content">
+                            <p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor reprehenderit.</p>
+                        </div>
+                    </li>
+                    <li>
+                        <h3 class="uk-accordion-title">My recorded GIFs flicker, what is wrong?</h3>
+                        <div class="uk-accordion-content">
+                            <p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat proident.</p>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="uk-text-center uk-text-small">Powered by Jigsaw and UIkit<br>Page made with <span style="color:red;">&hearts;</span> in Stuttgart</div>
+    </footer>
+
+</body>
+
+</html>
