@@ -1,5 +1,5 @@
 @charset "UTF-8";
-@import url('https://fonts.googleapis.com/css?family=Open+Sans:300,400,600');
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:300,400');
 body, h1, h2, h3, p, nav, ul, li, a, .uk-navbar-item, .uk-navbar-nav>li>a {
     font-family: 'Open Sans', sans-serif;
 }
@@ -74,4 +74,8 @@ footer {
 
 .features {
     background-color: #f8f8f8;
+}
+
+.text-small {
+  font-weight: 300;
 }
