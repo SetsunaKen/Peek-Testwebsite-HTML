@@ -76,6 +76,10 @@ footer {
     background-color: #f8f8f8;
 }
 
+.uk-label {
+  background-color: #f57900;
+}
+
 .text-small {
   font-weight: 300;
 }
